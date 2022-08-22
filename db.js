@@ -1,16 +1,12 @@
 const knex = require('knex');
+const config = require('./config/index')
 
 
 
 const knexClient = knex({
     client: 'mysql',
-    connection: {
-    host: 'sql11.freesqldatabase.com',
-    user: 'sql11513427',
-    password: '9nrAsRaDeN',
-    database: 'sql11513427',
-    port: 3306}
-    });
+    connection: config.dbConfig
+});
 
 
 // Kills the node application

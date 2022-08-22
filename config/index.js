@@ -4,11 +4,11 @@ module.exports = {
     dbConfig: {
         client: 'mysql',
         connection: {
-        host: process.env.DB_HOST || 'sql11.freesqldatabase.com',
-        user: process.env.DB_USER || 'sql11513427',
-        password: process.env.DB_PASSWORD || '9nrAsRaDeN',
-        database: process.env.DATABASE || 'sql11513427',
-        port: process.env.PORT || 3306
+        host: process.env.DB_HOST ,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_DATABASE,
+        port: process.env.DB_PORT 
     },
     getPasswordRounds: process.env.getPasswordRounds || 5
     }
