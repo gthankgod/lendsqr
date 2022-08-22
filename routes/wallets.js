@@ -1,5 +1,4 @@
 const express = require('express');
-const validate = require('express-validation');
 const wallets = require('../controllers/wallets');
 const authorize = require('../middlewares/auth');
 
