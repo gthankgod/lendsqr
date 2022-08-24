@@ -26,7 +26,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Routes
-app.use('/', routes);
+app.use('/v1', routes);
+app.use('/', (req, res) => res.json({ data: 'Online'}))
 
 // Catch all exceptions thrown from app
 app.use((req, res, next) => {
@@ -36,7 +37,6 @@ app.use((req, res, next) => {
 
 // error handler
 app.use(function(err, req, res, next) {
-  console.log(err)
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') !== 'production' ? err : {};

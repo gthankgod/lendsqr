@@ -2,7 +2,6 @@ module.exports = {
     jwtSecret: process.env.JWT_SECRET,
     jwtDuration: process.env.JWT_DURATION,
     dbConfig: {
-        client: 'mysql',
         connection: {
         host: process.env.DB_HOST ,
         user: process.env.DB_USER,

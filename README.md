@@ -1,4 +1,4 @@
-# Smart Age Calculator
+# LendsQR Test
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/6e057888e4234d5fae98d01aeb23da08)](https://www.codacy.com/gh/gthankgod/howold/dashboard?utm_source=github.com&utm_medium=referral&utm_content=gthankgod/howold&utm_campaign=Badge_Grade) [![license](https://img.shields.io/github/license/dec0dOS/amazing-github-template.svg?style=flat-square)](LICENSE)
 
@@ -15,7 +15,7 @@ The base url is `https://lendsqr-test-ng.herokuapp.com`
 The easiest way to using the feature is by calling the API GET resource via the terminal for a health check:
 
 ```sh
-curl --location --request GET 'https://backend-age-calculator.herokuapp.com/howold'
+curl --location --request GET 'https://lendsqr-test-ng.herokuapp.com'
 ```
 
 ### Usage
@@ -26,7 +26,7 @@ curl --location --request GET 'https://backend-age-calculator.herokuapp.com/howo
 var request = require('request');
 var options = {
   'method': 'POST',
-  'url': 'localhost:3000/auth/register',
+  'url': 'localhost:3000/v1/auth/register',
   'headers': {
     'Content-Type': 'application/json'
   },
@@ -49,7 +49,7 @@ request(options, function (error, response) {
 var request = require('request');
 var options = {
   'method': 'POST',
-  'url': 'localhost:3000/auth/login',
+  'url': 'localhost:3000/v1/auth/login',
   'headers': {
     'Content-Type': 'application/json'
   },
@@ -72,7 +72,7 @@ request(options, function (error, response) {
 var request = require('request');
 var options = {
   'method': 'POST',
-  'url': 'localhost:3000/wallets/balance',
+  'url': 'localhost:3000/v1/wallets/balance',
   'headers': {
     'x-auth-token': ''
   }
@@ -117,7 +117,7 @@ request(options, function (error, response) {
 var request = require('request');
 var options = {
   'method': 'POST',
-  'url': 'localhost:3000/wallets/withdraw',
+  'url': 'localhost:3000/v1/wallets/withdraw',
   'headers': {
     'x-auth-token': '1234566774545',
     'Content-Type': 'application/json'
@@ -141,7 +141,7 @@ request(options, function (error, response) {
 var request = require('request');
 var options = {
   'method': 'POST',
-  'url': 'localhost:3000/wallets/transfer',
+  'url': 'localhost:3000/v1/wallets/transfer',
   'headers': {
     'x-auth-token': '1234566774545',
     'Content-Type': 'application/json'

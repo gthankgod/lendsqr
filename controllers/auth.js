@@ -8,6 +8,7 @@ const register = async (req, res, next) => {
       const user = await service.register({...req.body});
       return responseHandler(res, user, 'User was succesfully registered', { code: 200 })
     } catch (error) {
+      console.log(error)
       return responseHandler(res, null, error.message, { code: 400 });
     }
   };
